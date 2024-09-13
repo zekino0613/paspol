@@ -34,10 +34,9 @@
         <a href="<?php echo home_url('/'); ?>#about"><li>ABOUT</li></a>
         <a href="<?php echo home_url('/'); ?>#news"><li>NEWS</li></a>
         <a href="<?php echo home_url('/'); ?>#contact"><li>CONTACT</li></a>
-        
-      </ul>     
+      </ul>
     </div><!-- /.header__inner--pc -->
-  
+
     <div class="header__inner--sp">
       <div class="menu">MENU</div><!-- /.menu -->
       <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
