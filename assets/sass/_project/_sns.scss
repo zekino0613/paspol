@@ -1,0 +1,165 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#sns {
+  .sns {
+    &__top {
+      display: flex;
+      justify-content: center;
+        a {
+          position: relative;
+          top: 33px;
+          transition: .3s;
+          & img {
+            width: 50px;
+            height: 50px;
+          }
+        }  
+
+        a:hover {
+          top: 28px;
+          transition: .3s;
+        }
+    }
+
+    &__flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      padding: 35px 0;
+      gap: 30px;
+
+      .box {
+        display: block;
+        text-align: center;
+        align-content: center;
+        font-size: 13px;
+        max-width: 162px;
+        width: 100%;
+        height: 45px;
+        background-color: white;
+        font-family: "Gill Sans Std Book", sans-serif;
+        letter-spacing: 0.1em;
+      }
+
+      .facebook {
+        color: #4871a9;
+        border: 1px solid #4871a9;
+        transition: .3s;
+      }
+
+      .facebook:hover {
+        color: white;
+        background-color: #4871a9;
+        transition: .3s;
+      }
+
+      .twitter {
+        color: #70bdd3;
+        border: 1px solid #70bdd3;
+        transition: .3s;
+      }
+
+      .twitter:hover {
+        color: white;
+        background-color: #70bdd3;
+        transition: .3s;
+      }
+
+      .bookmark {
+        color: #2f9bcd;
+        border: 1px solid #2f9bcd;
+        transition: .3s;
+      }
+
+      .bookmark:hover {
+        color: white;
+        background-color: #2f9bcd;
+        transition: .3s;
+      }
+
+      .line {
+        color: #8ec09d;
+        border: 1px solid #8ec09d;
+        transition: .3s;
+        display: none;
+
+      }
+
+      .line:hover {
+        color: white;
+        background-color: #8ec09d;
+        transition: .3s;
+      }
+    }
+  }
+}
+
+@include mixin.TAB2 {
+  #sns {
+    .sns {  
+      &__flex {
+        padding: 35px 50px;
+        gap: 10px;
+  
+        .box {
+          font-size: 11px;
+          max-width: 150px;
+          width: 100%;
+          padding: 5px 0 0;
+        }
+      }
+    }
+  }
+}
+
+
+@include mixin.SP1 {
+  #sns {
+    .sns {
+      &__top {
+        display: flex;
+        justify-content: center;
+          a {
+            position: relative;
+            top: 33px;
+            transition: .3s;
+            & img {
+              width: 50px;
+              height: 50px;
+            }
+          }  
+  
+          a:hover {
+            top: 28px;
+            transition: .3s;
+          }
+      }
+  
+      &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: white;
+        padding: 35px 10px;
+        gap: 10px;
+  
+        .box {
+          display: block;
+          justify-content: initial;
+          text-align: center;  
+          align-content: center;
+          font-size: 11px;
+          max-width: 240px;
+          width: 100%;
+          height: 45px;
+          padding: 5px 0 0;
+          background-color: white;
+          font-family: "Gill Sans Std Book", sans-serif;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+  }
+}

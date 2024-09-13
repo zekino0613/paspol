@@ -1,0 +1,80 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#mainvisual {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  .main-arrow {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+  }
+
+  .main-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/paspol-image/main_visual_2-0x0.jpg");
+    z-index: 10;
+  }
+
+  .main-overlay {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    z-index: 20;
+  }
+
+  .main-logo-sp {
+    display: none;
+  }
+}
+
+@include mixin.TAB1 {  
+  #mainvisual {
+    width: 100%;
+    height: 100%;
+    .main-arrow {
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 8%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+    }
+
+    .main-image {
+      width: 100%;
+  
+    }
+
+    .main-overlay {
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      z-index: 20;
+    }
+
+    .main-logo-sp {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: repeat;
+      background-color: blueviolet;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      z-index: 30;
+      background-image: url(../images/paspol-image/siteLogo-sp@2x.png);
+    }
+  }
+}
