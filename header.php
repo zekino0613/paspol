@@ -34,6 +34,7 @@
         <a href="<?php echo home_url('/'); ?>#about"><li>ABOUT</li></a>
         <a href="<?php echo home_url('/'); ?>#news"><li>NEWS</li></a>
         <a href="<?php echo home_url('/'); ?>#contact"><li>CONTACT</li></a>
+        
       </ul>     
     </div><!-- /.header__inner--pc -->
   
