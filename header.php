@@ -16,8 +16,10 @@
   <link rel="stylesheet" href="https://kit.fontawesome.com/d4a0aa4940.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
-
+    <!-- slick/CSS -->
+  <link rel="stylesheet"  href="<?php echo get_template_directory_uri(); ?>assets/css/slick/slick-theme.css"/>
+  <link rel="stylesheet"  href="<?php echo get_template_directory_uri(); ?>assets/css/slick/slick.css"/>
+  <link rel="stylesheet"  href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
 </head>
 
   <header id="header">

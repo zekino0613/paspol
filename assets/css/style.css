@@ -449,7 +449,7 @@ a {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 #mainvisual .main-arrow {
   width: 20px;
@@ -461,15 +461,13 @@ a {
   transform: translate(-50%, -50%);
   z-index: 20;
 }
-#mainvisual .main-image {
+#mainvisual .mainvisual__images {
   width: 100%;
   height: 100%;
-  background-image: url("../images/paspol-image/main_visual_2-0x0.jpg");
-  z-index: 10;
 }
 #mainvisual .main-overlay {
   position: absolute;
-  bottom: 6px;
+  bottom: 0;
   left: 0;
   z-index: 20;
 }
