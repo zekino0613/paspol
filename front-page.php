@@ -6,14 +6,14 @@
   <main>
     <section id="mainvisual">
       <img class="mainvisual__arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/mainVisual-arrow@2x.png" alt="下矢印画像">
-
-      <div class="mainvisual__images">
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_2-0x0.jpg" alt="メインビジュアル画像１" /></div><!-- /.mainvisual__images--item -->
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_6-0x0.jpg" alt="メインビジュアル画像２" /></div><!-- /.mainvisual__images--item -->
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_7-0x0.jpg" alt="メインビジュアル画像３" /></div><!-- /.mainvisual__images--item -->
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_13-0x0.jpg" alt="メインビジュアル画像４" /></div><!-- /.mainvisual__images--item -->
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_111-0x0.jpg" alt="メインビジュアル画像５" /></div><!-- /.mainvisual__images--item -->
-      </div><!-- / -->
+      <p>ここをクリックするとテキストが非表示になります。</p>
+      <!-- <div class="mainvisual__images">
+        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_2-0x0.jpg" alt="メインビジュアル画像１" /></div>
+        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_6-0x0.jpg" alt="メインビジュアル画像２" /></div>
+        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_7-0x0.jpg" alt="メインビジュアル画像３" /></div>
+        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_13-0x0.jpg" alt="メインビジュアル画像４" /></div>
+        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_111-0x0.jpg" alt="メインビジュアル画像５" /></div>
+      </div> -->
 
       <div class="mainvisual__logo-sp"></div><!-- /mainvisual__logo-sp -->
       <img class="mainvisual__overlay" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/mainVisual-overlay@2x.png" alt="mainover">

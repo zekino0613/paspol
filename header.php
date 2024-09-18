@@ -16,32 +16,42 @@
   <link rel="stylesheet" href="https://kit.fontawesome.com/d4a0aa4940.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css">
-    <!-- slick/CSS -->
-  <link rel="stylesheet"  href="<?php echo get_template_directory_uri(); ?>assets/css/slick/slick-theme.css"/>
-  <link rel="stylesheet"  href="<?php echo get_template_directory_uri(); ?>assets/css/slick/slick.css"/>
-  <link rel="stylesheet"  href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
+  <!-- slick/CSS -->
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/slick/slick.css">
+  <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
 </head>
 
-  <header id="header">
-    <div class="header__inner--pc">
-      <a href="<?php echo home_url('/'); ?>">
-        <h1>
-          <img class="header__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/siteLogo-pc@2x.png" alt="ヘッダーロゴ">
-        </h1>
+<header id="header">
+  <div class="header__inner--pc">
+    <a href="<?php echo home_url('/'); ?>">
+      <h1>
+        <img class="header__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/siteLogo-pc@2x.png" alt="ヘッダーロゴ">
+      </h1>
+    </a>
+
+    <ul class="header__nav">
+      <a href="<?php echo home_url('/'); ?>#top">
+        <li class="nav_li">TOP</li>
       </a>
+      <a href="<?php echo home_url('/'); ?>#product">
+        <li>PRODUCT</li>
+      </a>
+      <a href="<?php echo home_url('/'); ?>#about">
+        <li>ABOUT</li>
+      </a>
+      <a href="<?php echo home_url('/'); ?>#news">
+        <li>NEWS</li>
+      </a>
+      <a href="<?php echo home_url('/'); ?>#contact">
+        <li>CONTACT</li>
+      </a>
+    </ul>
+  </div><!-- /.header__inner--pc -->
 
-      <ul class="header__nav">
-        <a href="<?php echo home_url('/'); ?>#top"><li class="nav_li">TOP</li></a>
-        <a href="<?php echo home_url('/'); ?>#product"><li>PRODUCT</li></a>
-        <a href="<?php echo home_url('/'); ?>#about"><li>ABOUT</li></a>
-        <a href="<?php echo home_url('/'); ?>#news"><li>NEWS</li></a>
-        <a href="<?php echo home_url('/'); ?>#contact"><li>CONTACT</li></a>
-      </ul>
-    </div><!-- /.header__inner--pc -->
-
-    <div class="header__inner--sp">
-      <div class="menu">MENU</div><!-- /.menu -->
-      <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
-    </div><!-- /.header__inner--sp -->
-    <?php wp_head(); ?>
-  </header>
+  <div class="header__inner--sp">
+    <div class="menu">MENU</div><!-- /.menu -->
+    <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
+  </div><!-- /.header__inner--sp -->
+  <?php wp_head(); ?>
+</header>

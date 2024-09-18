@@ -30,7 +30,6 @@
   </div><!-- /.footer__end -->
 
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <?php wp_footer(); ?>
 </body>
