@@ -18,8 +18,9 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css">
   <!-- slick/CSS -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/slick/slick.css">
-  <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
+  <!-- <link rel="stylesheet" href="assets/css/slick/slick.css">
+  <link rel="stylesheet" href="assets/css/slick/slick-theme.css"> -->
+  <?php wp_head(); ?>
 </head>
 
 <header id="header">
@@ -53,5 +54,4 @@
     <div class="menu">MENU</div><!-- /.menu -->
     <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
   </div><!-- /.header__inner--sp -->
-  <?php wp_head(); ?>
 </header>
