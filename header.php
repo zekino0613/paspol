@@ -32,7 +32,7 @@
     </a>
 
     <ul class="header__nav">      
-      <li class="nav_li"><a href="<?php echo home_url('/'); ?>#top">TOP></a></li>
+      <li class="nav_li"><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
       <li><a href="<?php echo home_url('/'); ?>#product">PRODUCT</li></a>
       <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
       <li><a href="<?php echo home_url('/'); ?>#news">NEWS</li></a>

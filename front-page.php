@@ -12,8 +12,7 @@
         <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_13-0x0.jpg" alt="メインビジュアル画像４" /></div>
         <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_111-0x0.jpg" alt="メインビジュアル画像５" /></div>
       </div>
-      <!-- <div class="mainvisual__arrow"></div> -->
-      <!-- <div class="mainvisual__overlay"></div> -->
+    
       <div class="mainvisual__logo-sp"></div><!-- /mainvisual__logo-sp -->
     </section>
 

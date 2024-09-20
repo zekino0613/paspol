@@ -28,8 +28,6 @@
 
     &__nav {
       display: flex;
-      a {
-        color: white;
         li {
           font-size: 14px;
           font-family: "Gill Sans Std Book", sans-serif;
@@ -37,6 +35,9 @@
           padding-bottom: 8px;
           margin: 0 0 0 40px;
           position: relative;
+          a {
+            color: white;
+          }
         }
 
         .nav_li {
@@ -60,10 +61,10 @@
           opacity: 1;
           visibility: visible;
         }
-      }
     }
   }
 }
+
 
 @include mixin.TAB1 {
   #header {
