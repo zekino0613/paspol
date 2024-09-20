@@ -108,6 +108,37 @@ a {
     width: 15px;
     height: 10px;
   }
+  #header .header__inner--sp .hamburger {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    top: -150%;
+    transition: 0.5s;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #header .header__inner--sp .hamburger .hamburger-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 300px;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #header .header__inner--sp .hamburger .hamburger-menu li {
+    color: #FFFFFF;
+    font-size: 14px;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 10px 20px;
+  }
+  #header .header__inner--sp .hamburger .hamburger.active {
+    top: 0;
+  }
 }
 #footer .footer {
   width: 100%;
@@ -445,34 +476,47 @@ a {
     margin: 15px 0;
   }
 }
-#mainvisual {
+#mainvisual .mainvisual {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100vh;
 }
-#mainvisual .main-arrow {
-  width: 20px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 8%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-}
 #mainvisual .mainvisual__images {
+  position: relative;
+  overflow: hidden;
+}
+#mainvisual .mainvisual__images--item {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mainvisual .mainvisual__images::before {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  right: 50%;
+  bottom: 60px;
+  width: 20px;
+  height: 24px;
+  background: url(../images/paspol-image/mainVisual-arrow@2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#mainvisual .mainvisual__images::after {
+  content: "";
+  position: absolute;
+  z-index: 20;
   width: 100%;
   height: 100%;
-  background-color: blue;
-}
-#mainvisual .main-overlay {
-  position: absolute;
   bottom: 0;
-  left: 0;
-  z-index: 20;
+  background: url(../images/paspol-image/mainVisual-overlay@2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
-#mainvisual .main-logo-sp {
+#mainvisual .mainvisual .main-logo-sp {
   display: none;
 }
 
