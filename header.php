@@ -31,27 +31,31 @@
       </h1>
     </a>
 
-    <ul class="header__nav">      
+    <ul class="header__nav">
       <li class="nav_li"><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
       <li><a href="<?php echo home_url('/'); ?>#product">PRODUCT</li></a>
       <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
       <li><a href="<?php echo home_url('/'); ?>#news">NEWS</li></a>
-      <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a> 
+      <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a>
     </ul>
   </div><!-- /.header__inner--pc -->
 
   <div class="header__inner--sp">
-    <div class="menu js-open">MENU</div><!-- /.menu -->
-    <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
-    
-    <nav class="hamburger js-nav">
-      <ul class="hamburger-menu">      
-        <li><a href="<?php echo home_url('/'); ?>#top">TOP></a></li>
+    <nav class="hamburger">
+      <ul>
+        <li><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
         <li><a href="<?php echo home_url('/'); ?>#product">PRODUCT</li></a>
         <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
         <li><a href="<?php echo home_url('/'); ?>#news">NEWS</li></a>
-        <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a> 
+        <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a>
       </ul>
-    </nav><!-- /.hamburger -->  
+    </nav><!-- /.hamburger-menu -->
+
+    <div class="sp-menu">
+      <div class="menu">MENU</div><!-- /.menu -->
+      <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
+    </div><!-- /.sp-menu -->
+
   </div><!-- /.header__inner--sp -->
+
 </header>

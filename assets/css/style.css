@@ -82,62 +82,61 @@ a {
 }
 
 @media (max-width: 900px) {
-  #header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 100;
-  }
   #header .header__inner--pc {
     display: none;
   }
   #header .header__inner--sp {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -1px;
+    transition: all 0.5s;
+    transform: translateY(-264px); /* 初期状態では上方向に移動させて隠しておく */
+    /* ナビゲーションメニューを開いた状態 */
+  }
+  #header .header__inner--sp.open {
+    transform: translateY(0); /* ヘッダーの高さ分下方向に移動する */
+  }
+  #header .header__inner--sp .hamburger {
+    /* ナビゲーションメニューの初期状態 */
+    width: 100%;
+    height: 264px;
+    top: 0px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #header .header__inner--sp .hamburger ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  #header .header__inner--sp .hamburger ul li a {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 20px 60px 16px;
+  }
+  #header .header__inner--sp .sp-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
     height: 45px;
-    padding: 0 5%;
+    padding: 0 60px;
   }
-  #header .header__inner--sp .menu {
+  #header .header__inner--sp .sp-menu .menu {
     font-size: 12px;
     color: #5d5d5d;
     letter-spacing: 2px;
   }
-  #header .header__inner--sp .menu-tab {
+  #header .header__inner--sp .sp-menu .menu-tab {
     width: 15px;
     height: 10px;
-  }
-  #header .header__inner--sp .hamburger {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    text-align: center;
-    top: -150%;
-    transition: 0.5s;
-    overflow-y: scroll;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  #header .header__inner--sp .hamburger .hamburger-menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 300px;
-    height: 100vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #header .header__inner--sp .hamburger .hamburger-menu li {
-    color: #FFFFFF;
-    font-size: 14px;
-    border-bottom: 1px solid #FFFFFF;
-    padding: 10px 20px;
-  }
-  #header .header__inner--sp .hamburger .hamburger.active {
-    top: 0;
   }
 }
 #footer .footer {

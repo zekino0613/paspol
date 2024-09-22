@@ -11,8 +11,15 @@ jQuery(document).ready(function ($) {
   });
 
 
-  $('.js-open').on('click', function(){
-    $('.js-nav').toggleClass('active');
-  
+  //   // ハンバーガーメニューボタンにクリックイベントを指定
+  $(".sp-menu").click(function () {
+    // ハンバーガーメニューボタンとナビゲーションメニューに
+    // 同時にopenクラスを付けたり外したりする
+    $(".header__inner--sp").toggleClass("open");
+    // $(".sp-menu").toggleClass("open");
   });
-});  
+
+// 【解説】.sp-menuをクリックした際に、openクラスを.header__inner--spに付けることで、メニューの表示を切り替える。
+// CSS/SCSS: .header__inner--spがopenクラスを持つとき、transform: translateY(0);でメニューが表示されるようにしている。
+// これで、ハンバーガーメニューの開閉が.sp-menuのクリックに連動するようになります。
+});
