@@ -1,5 +1,6 @@
 $TAB1: 900px;
 $TAB2: 700px;
+$TAB3: 779px;
 $SP1: 579px;
 $SP2: 500px;
 
@@ -13,6 +14,12 @@ $SP2: 500px;
 
 @mixin TAB2 {
   @media (max-width: $TAB2) {
+    @content;
+  }
+}
+
+@mixin TAB3 {
+  @media (max-width: $TAB3) {
     @content;
   }
 }

@@ -34,7 +34,7 @@
             僕たちが作るものは、<br>
             そんな、存在でありたい。
           </p>
-
+            
           <p class="concept__inner--text">
             そして、人と人が繋がる<br>
             こんな時代だからこそ、<br>
@@ -49,6 +49,55 @@
         </div><!-- /.concept__inner -->
       </div>
     </section>
+
+    
+    <section id ="product">
+      <div class="product__inner">
+        <div class="product__inner--flex">
+          <h2 class="section-title ">PRODUCT</h2>
+          <a class="more-btn bb" href="<?php the_permalink(); ?>">MORE</a> 
+        </div>
+        <div class="product-postlist">            
+        <?php
+        // WP_Query を使ってカスタム投稿タイプ 'product' の最新６件の投稿を取得
+        $news_query = new WP_Query(array(
+            'post_type' => 'product',      // 取得する投稿タイプを 'news' に指定
+            'posts_per_page' => 6,      // 取得する投稿の数を 6 に指定
+            'order' => 'ASC' //昇順で並び替える
+        ));
+
+        
+        // 投稿が存在するか確認
+        if ($news_query->have_posts()) :
+            // 投稿が存在する場合、ループを開始
+            while ($news_query->have_posts()) : $news_query->the_post(); //投稿が存在するか確認 : まだ投稿が残っているかチェック
+                ?>
+              
+              <div class="product-post">
+                <?php if (has_post_thumbnail()) : ?>
+                  <div class="post-thumbnail">
+                      <?php the_post_thumbnail('medium'); // サムネイル画像を 'medium' サイズで表示 ?>
+                  </div>
+                  <h3 class="product-title"><?php the_title(); ?></h3> <!-- 投稿のタイトルを表示 -->
+                <?php endif; ?>
+              </div>    
+        <?php
+            endwhile;
+            // クエリ後のグローバルな投稿データをリセット
+            wp_reset_postdata();
+        else :
+            // 投稿が見つからない場合のメッセージを表示
+            echo '<p>No news found.</p>';
+        endif;
+        ?>
+      </div><!-- /.product-postlist -->  
+      <a class="more-btn aa" href="<?php the_permalink(); ?>">MORE</a> <!-- 投稿の詳細ページへのリンクを表示 -->
+      </div>  
+    </section>
+
+
+
+
 
     <section id="sns">
       <div class="sns__top">

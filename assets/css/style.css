@@ -11,7 +11,7 @@ body {
   background-color: #F6F6F6;
   font-size: 0.9rem;
   letter-spacing: 0px;
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 img {
@@ -25,6 +25,67 @@ li {
 a {
   text-decoration: none;
   color: rgb(0, 0, 0);
+}
+
+.section-title {
+  display: block;
+  font-size: 30px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  background: url(../images/paspol-image/sectionTitle-underLine@2x.png);
+  width: 43%;
+  height: 100%;
+  bottom: 0px;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.more-btn {
+  max-width: 166px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  border: 1px solid black;
+  padding: 17px 54px 14px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  position: relative;
+  justify-self: end;
+}
+.more-btn::after {
+  content: "";
+  position: absolute;
+  background: url(../images/paspol-image/button-arrow@2x.png);
+  width: 5%;
+  height: 100%;
+  top: 18px;
+  right: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.more-btn:hover {
+  color: white;
+  background-color: black;
+  transition: 0.3s;
+}
+.more-btn:hover::after {
+  content: "";
+  position: absolute;
+  background: url(../images/paspol-image/button-arrow-hover@2x.png);
+  width: 5%;
+  height: 100%;
+  top: 15px;
+  right: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #header {
@@ -127,7 +188,7 @@ a {
     align-items: center;
     background-color: #FFFFFF;
     height: 45px;
-    padding: 0 60px;
+    padding: 0 7%;
   }
   #header .header__inner--sp .sp-menu .menu {
     font-size: 12px;
@@ -555,5 +616,121 @@ a {
     left: 50%;
     z-index: 30;
     background-image: url(../images/paspol-image/siteLogo-sp@2x.png);
+  }
+}
+#product {
+  background-color: white;
+  padding: 110px 7%;
+  margin: 0 auto;
+}
+#product .product__inner {
+  max-width: 816px;
+  width: 100%;
+  margin: 0 auto;
+}
+#product .product__inner .aa {
+  display: none;
+}
+#product .product__inner--flex {
+  display: flex;
+  justify-content: space-between;
+}
+#product .product__inner .product-postlist {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+#product .product__inner .product-postlist .product-post {
+  width: 100%;
+  margin: 60px auto 0;
+  padding: 0 5%;
+}
+#product .product__inner .product-postlist .product-post .post-thumbnail {
+  width: 100%;
+}
+#product .product__inner .product-postlist .product-post .post-thumbnail img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#product .product__inner .product-postlist .product-post .product-title {
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 0;
+  padding: 0 20px;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+}
+
+@media (max-width: 779px) {
+  #product {
+    padding: 70px 5%;
+  }
+  #product .product__inner--flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px;
+  }
+  #product .product__inner .product-postlist {
+    display: block;
+  }
+  #product .product__inner .product-postlist .product-post .post-thumbnail {
+    width: 53%;
+  }
+  #product .product__inner .product-postlist .product-post .product-title {
+    margin: 20px 0 0;
+    padding: 0 25px;
+  }
+}
+@media (max-width: 700px) {
+  #product {
+    padding: 70px 7%;
+  }
+  #product .product__inner .product-postlist .product-post .post-thumbnail {
+    width: 48%;
+  }
+}
+@media (max-width: 500px) {
+  #product {
+    padding: 70px 7%;
+  }
+  #product .product__inner .aa {
+    display: block;
+    margin: 60px auto 0;
+  }
+  #product .product__inner--flex {
+    display: flex;
+    flex-direction: column;
+  }
+  #product .product__inner--flex .section-title {
+    margin: 0 auto;
+  }
+  #product .product__inner--flex .section-title::after {
+    bottom: -12px;
+    left: 41px;
+  }
+  #product .product__inner--flex .bb {
+    display: none;
+  }
+  #product .product__inner .product-postlist {
+    display: block;
+  }
+  #product .product__inner .product-postlist .product-post {
+    width: 100%;
+    margin: 30px auto 0;
+    padding: 0;
+  }
+  #product .product__inner .product-postlist .product-post .post-thumbnail {
+    width: 100%;
+  }
+  #product .product__inner .product-postlist .product-post .product-title {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    margin: 0;
+    padding: 0px 7%;
   }
 }/*# sourceMappingURL=style.css.map */

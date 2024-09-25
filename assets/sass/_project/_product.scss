@@ -1,0 +1,149 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#product {
+  background-color: white;
+  padding: 110px 7%;
+  margin: 0 auto;
+  .product {
+    &__inner {
+      max-width: 816px;
+      width: 100%;
+      margin: 0 auto;
+      .aa {
+        display: none;
+      }
+      &--flex {
+        display: flex;
+        justify-content: space-between;
+      }  
+      .product-postlist {
+        display: grid;
+        grid-template-rows:  auto auto; // 行の高さを自動にする
+        grid-template-columns: repeat(3, 1fr); // 3列、各列が均等の幅で自動調整される
+        .product-post {
+          width: 100%; // コンテンツ全体の幅を相対的に設定して自動調整
+          margin: 60px auto 0;
+          padding: 0 5%;
+          .post-thumbnail {
+            width: 100%;
+            img {
+              width: 100%; // 横幅を100%に設定
+              height: auto; // 高さは自動で設定してアスペクト比を維持
+              object-fit: cover; // 画像を親要素にフィットさせる（場合によって `contain` や `fill` も可）
+            }
+          }
+
+          .product-title {
+            width: 100%; // 固定サイズではなく、親要素に対して100%
+            height: auto;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 0;
+            padding: 0 20px;
+            letter-spacing: 0.1em;
+            line-height: 1.7em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixin.TAB3 {
+  #product {
+    padding: 70px 5%;
+    .product {
+      &__inner {
+        &--flex {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 40px;
+        }
+
+        .product-postlist {
+          display: block;
+
+          .product-post {
+            .post-thumbnail {
+              width: 53%;
+            }
+            .product-title {
+              margin: 20px 0 0;
+              padding: 0 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include mixin.TAB2 {
+  #product {
+    padding: 70px 7%;
+
+    .product {
+      &__inner {
+        .product-postlist {
+          .product-post {
+            .post-thumbnail {
+              width: 48%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include mixin.SP2 {
+  #product {
+    padding: 70px 7%;
+    .product {
+      &__inner {
+        .aa {
+          display: block;
+          margin: 60px auto 0 ;
+        } 
+        &--flex {
+          display: flex;
+          flex-direction: column;
+          .section-title { 
+            margin: 0 auto;
+            &::after {
+              bottom: -12px;
+              left: 41px;
+            }
+          }
+          .bb {
+            display: none;
+          }
+        }  
+
+        .product-postlist {
+          display: block;
+          .product-post {
+            width: 100%; // コンテンツ全体の幅を相対的に設定して自動調整
+            margin: 30px auto 0;
+            padding: 0;
+            .post-thumbnail {
+              width: 100%;
+            }
+
+            .product-title {
+              width: 100%; // 固定サイズではなく、親要素に対して100%
+              height: auto;
+              font-size: 18px;
+              margin: 0;
+              padding: 0px 7%;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}

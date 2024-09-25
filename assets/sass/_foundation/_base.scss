@@ -14,7 +14,7 @@ body {
   // background-color: blanchedalmond;
   font-size: 0.9rem;
   letter-spacing: 0px;
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 img {
@@ -29,3 +29,67 @@ a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+
+.section-title {
+  display: block;
+  font-size: 30px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background: url(../images/paspol-image/sectionTitle-underLine@2x.png);
+    width: 43%;
+    height: 100%;
+    bottom: 0px;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+.more-btn {
+  max-width: 166px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  border: 1px solid black ;
+  padding: 17px 54px 14px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  position: relative;
+  justify-self: end;  // 水平方向で右端に移動
+  &::after {
+    content: '';
+    position: absolute;
+    background: url(../images/paspol-image/button-arrow@2x.png);
+    width: 5%;
+    height: 100%;
+    top: 18px;
+    right: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.more-btn:hover {
+  color: white;
+  background-color: black;
+  transition: 0.3s;
+  &::after {
+    content: '';
+    position: absolute;
+    background: url(../images/paspol-image/button-arrow-hover@2x.png);
+    width: 5%;
+    height: 100%;
+    top: 15px;
+    right: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
