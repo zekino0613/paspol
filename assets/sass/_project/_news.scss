@@ -1,0 +1,137 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+
+#news {
+  background-color: #f6f6f6;
+  padding: 110px 7%;
+  margin: 0 auto;
+  .news {
+    &__inner {
+      max-width: 816px;
+      width: 100%;
+      margin: 0 auto; 
+      .section-title { 
+        &::after {
+        width: 70%;
+        }  
+      }
+      .aa {
+        display: none;
+      }
+      &--flex {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 75px;
+      }  
+      .news-postlist {    
+        .news-post {
+          display: flex;
+          width: 100%; // コンテンツ全体の幅を相対的に設定して自動調整
+          margin: 60px auto 0;
+          padding: 0 ;
+          .post-thumbnail {
+            width: 40%;
+            img {
+              width: 100%; // 横幅を100%に設定
+              height: auto; // 高さは自動で設定してアスペクト比を維持
+            }
+          }
+
+          .post-textarea {
+            width: 60%;
+            padding: 0 0 0 30px;
+              .news-title {
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                line-height: 1.7em;
+              }
+              .post-date {
+                display: block;
+                font-size: 12px;
+                margin: 5px 0 0 ;
+              }
+
+              p {
+                font-size: 13px;
+                margin: 20px 0 0 ;
+                line-height: 1.7em;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixin.SP2 {
+  #news {
+    padding: 70px 7% 20px;
+    margin: 0 auto;
+    .news {
+      &__inner {
+        max-width: 816px;
+        width: 100%;
+        margin: 0 auto; 
+        .section-title { 
+          margin: 0 auto;
+          &::after {
+          width: 70px;
+          bottom: -15px;
+          left: 11px;
+          }  
+        }
+        .aa {
+          display: block;
+          margin: 60px auto 0;
+        }
+        &--flex {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 75px;
+          .bb {
+            display: none;
+          }
+        }  
+        .news-postlist {    
+          .news-post {
+            display: flex;
+            flex-direction: column;
+            width: 100%; // コンテンツ全体の幅を相対的に設定して自動調整
+            margin: 60px auto 0;
+            padding: 0 ;
+            .post-thumbnail {
+              width: 100%;
+              img {
+                width: 100%; // 横幅を100%に設定
+                height: auto; // 高さは自動で設定してアスペクト比を維持
+              }
+            }
+  
+            .post-textarea {
+              width: 100%;
+              padding: 0 ;
+                .news-title {
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin: 15px 0 0 ;
+                  letter-spacing: 0.1em;
+                  line-height: 1.7em;
+                }
+                .post-date {
+                  display: block;
+                  font-size: 12px;
+                  margin: 5px 0 0 ;
+                }
+  
+                p {
+                  display: none;
+                }
+            }
+          }
+        }
+      }
+    }
+  }  
+}

@@ -63,8 +63,10 @@
 
         .product-postlist {
           display: block;
-
           .product-post {
+            display: flex;
+            margin: 30px auto 0;
+            padding: 0;
             .post-thumbnail {
               width: 53%;
             }
@@ -72,12 +74,14 @@
               margin: 20px 0 0;
               padding: 0 25px;
             }
+          } 
+            
           }
         }
       }
     }
   }
-}
+
 
 
 @include mixin.TAB2 {
@@ -101,7 +105,7 @@
 
 @include mixin.SP2 {
   #product {
-    padding: 70px 7%;
+    padding: 70px 7% ;
     .product {
       &__inner {
         .aa {
@@ -114,6 +118,7 @@
           .section-title { 
             margin: 0 auto;
             &::after {
+              width: 70px;
               bottom: -12px;
               left: 41px;
             }
@@ -126,6 +131,7 @@
         .product-postlist {
           display: block;
           .product-post {
+            flex-direction: column;
             width: 100%; // コンテンツ全体の幅を相対的に設定して自動調整
             margin: 30px auto 0;
             padding: 0;
