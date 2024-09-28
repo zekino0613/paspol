@@ -25,6 +25,7 @@
           width: 100%; // コンテンツ全体の幅を相対的に設定して自動調整
           margin: 60px auto 0;
           padding: 0 5%;
+          transition: 0.3s;
           .post-thumbnail {
             width: 100%;
             img {
@@ -44,6 +45,17 @@
             letter-spacing: 0.1em;
             line-height: 1.7em;
           }
+
+          p {
+            font-size: 13px;
+            margin: 20px 0 0 ;
+            line-height: 1.7em;
+          }
+        }
+
+        .product-post:hover  {
+          opacity: 0.7;
+          transition: 0.3s;
         }
       }
     }

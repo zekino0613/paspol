@@ -91,5 +91,49 @@ a {
   }
 }
 
+.back-btn {
+  display: block;
+  max-width: 226px;
+  width: 100%;
+  height: auto;
+  margin: 60px auto 0 ;
+  font-size: 14px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  border: 1px solid black ;
+  padding: 17px 54px 14px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background: url(../images/paspol-image/button-arrow-back@2x.png);
+    width: 3%;
+    height: 100%;
+    top: 19px;
+    left: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.back-btn:hover {
+  color: white;
+  background-color: black;
+  transition: 0.3s;
+  &::after {
+    content: '';
+    position: absolute;
+    background: url(../images/paspol-image/button-arrow-back-hover@2x.png);
+    width: 3%;
+    height: 100%;
+    top: 19px;
+    left: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 
 
