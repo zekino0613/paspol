@@ -15,7 +15,7 @@
       }
       &--flex {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
       }  
       .product-postlist {
         display: grid;
@@ -127,14 +127,6 @@
         &--flex {
           display: flex;
           flex-direction: column;
-          .section-title { 
-            margin: 0 auto;
-            &::after {
-              width: 70px;
-              bottom: -12px;
-              left: 41px;
-            }
-          }
           .bb {
             display: none;
           }

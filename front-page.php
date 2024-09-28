@@ -54,7 +54,7 @@
     <section id ="product">
       <div class="product__inner">
         <div class="product__inner--flex">
-          <h2 class="section-title ">PRODUCT</h2>
+          <h2 class="section-title">PRODUCT</h2>
           <a class="more-btn bb" href="<?php echo get_post_type_archive_link('product'); ?>">MORE</a> 
         </div>
 

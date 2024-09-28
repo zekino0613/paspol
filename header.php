@@ -33,9 +33,9 @@
 
     <ul class="header__nav">
       <li class="nav_li"><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
-      <li><a href="<?php echo home_url('/'); ?>#product">PRODUCT</li></a>
+      <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
       <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
-      <li><a href="<?php echo home_url('/'); ?>#news">NEWS</li></a>
+      <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
       <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a>
     </ul>
   </div><!-- /.header__inner--pc -->
@@ -44,9 +44,9 @@
     <nav class="hamburger">
       <ul>
         <li><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
-        <li><a href="<?php echo home_url('/'); ?>#product">PRODUCT</li></a>
+        <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
         <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
-        <li><a href="<?php echo home_url('/'); ?>#news">NEWS</li></a>
+        <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
         <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a>
       </ul>
     </nav><!-- /.hamburger-menu -->
