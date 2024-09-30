@@ -1,0 +1,253 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+#contact {
+  margin: 100px auto;
+  padding: 0 7%;
+  background-color:#f6f6f6 ;
+  .contact {
+    &__inner {
+      max-width: 816px;
+      width: 100%;
+      margin: 0 auto;
+      .wpcf7-form {
+        max-width: 600px;
+        margin: 60px auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 49%);
+          label {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          .required {
+            background-color: #ff0000; /* レッド */
+            color: white; 
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 10px;
+            font-size: 12px;
+          }
+
+          input[type="text"],
+          input[type="tel"],
+          input[type="email"],
+          textarea {
+          width: 100%;
+          padding: 12px;
+          margin: 5px 0 40px;
+          border: 1px solid #797979;
+          border-radius: 5px;
+          font-size: 16px;
+          }
+
+          .btn-flex {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px auto 55px;
+            .wpcf7-previous  {
+              @extend .more-btn;
+              display: block;
+              width: 145px;
+              cursor: pointer;
+              margin: 0 auto;
+              padding: 13px 15px 10px;
+            }
+
+            .wpcf7-submit   {
+              @extend .more-btn;
+              display: block;
+              width: 145px;
+              cursor: pointer;
+              margin: 0 auto;
+              padding: 15px 33px 14px;
+            }
+
+            .wpcf7-spinner {
+              display: none;
+            }
+          }
+            
+          .wpcf7-not-valid-tip {
+            display: block;
+            color: red;
+            font-size: 14px;
+            margin: -40px 0 23px;
+          }
+      }
+
+      /* モーダルウィンドウのスタイル */
+      
+        .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(200, 200, 200, 0.5);
+          justify-content: center;
+          align-items: center;
+          .modal-content {
+            max-width: 600px;
+            width: 100%;
+            height: 90%;
+            background-color: white;
+            box-shadow: 0 4px 10px rgb(0 0 0 / 49%);
+            border-radius: 15px;
+            margin: 65px auto;
+            padding: 30px;
+              
+              .section-title {
+                font-size: 35px;
+                font-weight: bold;
+              }
+
+              p{
+                font-size: 20px;
+                font-weight: bold;
+                margin: 60px 0;
+              }
+              #modal-form-data  {
+                max-width: 100%;      /* 親要素内で幅を制限 */
+                box-sizing: border-box; /* パディングを含めたボックスサイズにする */
+                p  {
+                  font-size: 25px;
+                  font-weight: bold;
+                  letter-spacing: -2px;
+                }
+                span {
+                  color: #cd7121;
+                  text-shadow: 2px 3px 3px rgba(50, 50, 50, 0.4);
+                  letter-spacing: 1px;
+                  word-wrap: break-word; /* 長い単語も折り返す */
+                  white-space: normal;   /* テキストを通常のスペース扱いにする */
+                  display: inline-block; /* インラインブロックにする */
+                  max-width: 100%;       /* 最大幅を100%に制限 */
+                  padding: 5px 0; /* 各フィールド間に余白を追加 */
+                }
+              }
+          }
+
+          .btn-flex {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px auto 55px;  
+              .back-btn {
+                max-width: 190px;
+                margin: 0 auto;
+                padding: 18px 36px 14px;
+                  &::after {
+                    width: 4%;
+                    top:19px;
+                  }
+              }
+              
+              .back-btn:hover {
+                color: white;
+                background-color: black;
+                transition: 0.3s;
+                &::after {
+                  width: 4%;
+                  top: 19px;
+                }
+              }
+
+              .more-btn {
+                max-width: 175px;
+                margin: 0 auto;
+                padding: 17px 51px 14px;
+              }
+
+              .more-btn:hover {
+                &::after {
+                  width: 5%;
+                  top: 18px;
+                }
+              }
+          }    
+        }
+      }
+    }
+  
+}
+
+
+@include mixin.SP2 {
+  #contact {
+    .contact {
+      &__inner {
+        .wpcf7-form {
+          .btn-flex {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        .modal {
+          .modal-content {
+            margin: 100px 10px;
+            max-width: 415px;
+            width: 95%;
+            height: 85%;
+            .section-title {
+              font-size: 25px;
+            }
+
+            p{
+              font-size: 18px;
+            }
+            #modal-form-data  {
+              p  {
+                font-size: 20px;
+              }
+              span {
+                letter-spacing: 0px;
+              }
+            }
+
+            .btn-flex {
+              display: flex;
+              flex-direction: column;
+              margin: 10px auto 55px;  
+                .back-btn {
+                  max-width: 190px;
+                  margin: 0 auto;
+                  padding: 18px 36px 14px;
+                    &::after {
+                      width: 4%;
+                      top:19px;
+                    }
+                }
+                
+                .back-btn:hover {
+                  color: white;
+                  background-color: black;
+                  transition: 0.3s;
+                  &::after {
+                    width: 4%;
+                    top: 19px;
+                  }
+                }
+
+                .more-btn {
+                  max-width: 190px;
+                  padding: 17px 51px 14px;
+                  margin: 13px auto;
+                }
+
+                .more-btn:hover {
+                  &::after {
+                    width: 5%;
+                    top: 18px;
+                  }
+                }
+            }    
+          }
+        }
+      }
+    }    
+  }
+}

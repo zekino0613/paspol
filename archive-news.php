@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<?php get_header(); ?>
+
+<?php
+  get_template_part('template-parts/header'); // header.php をインクルード
+?>
 
   <body>
     <main>
-      <section id="a-mainvisual">
-        <div class="a-mainvisual__images">
-          <div class="a-mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/5aafae338835b1fd1119f273565bd3de1.jpg" alt="メインビジュアル画像１" /></div>
-        </div>
-      
-        <div class="a-mainvisual__logo-sp"></div><!-- /mainvisual__logo-sp -->
-      </section>
+      <!-- 【共通パーツ】template-parts/parts_mainvisual -->
+      <?php get_template_part('template-parts/parts_mainvisual'); ?>
 
       <section id ="news">
         <div class="news__inner">
@@ -82,31 +78,11 @@
         </div>  
       </section>
 
+      <!-- 【共通パーツ】template-parts/sns -->
+      <?php get_template_part('template-parts/sns'); ?>   
 
-
-      <section id="sns">
-        <div class="sns__top">
-          <a href="<?php echo home_url('/'); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/backTop@2x.png" alt="sns-top画像">
-          </a>
-        </div><!-- /.sns__top -->
-
-
-        <ul class="sns__flex">
-          <a class="box facebook" href="<?php echo home_url('/'); ?>">
-            <li>Share on Facebook</li>
-          </a>
-          <a class="box twitter" href="<?php echo home_url('/'); ?>">
-            <li>Share on Twitter</li>
-          </a>
-          <a class="box bookmark" href="<?php echo home_url('/'); ?>">
-            <li>Hatena Bookmark</li>
-          </a>
-          <a class="box line" href="<?php echo home_url('/'); ?>">
-            <li>Send to LINE</li>
-          </a>
-        </ul>
-      </section><!-- /.sns -->
     </main>
-    <?php get_footer(); ?>
+    <?php
+      get_template_part('template-parts/footer'); // footer.php をインクルード
+    ?>
   </body>

@@ -23,3 +23,38 @@ jQuery(document).ready(function ($) {
 // CSS/SCSS: .header__inner--spがopenクラスを持つとき、transform: translateY(0);でメニューが表示されるようにしている。
 // これで、ハンバーガーメニューの開閉が.sp-menuのクリックに連動するようになります。
 });
+
+
+
+// 確認画面モーダル
+jQuery(document).ready(function($) {
+  // フォーム送信ボタンが押されたとき
+  $('#contact .wpcf7-submit').click(function(e) {
+      e.preventDefault(); // フォームの自動送信を防ぐ
+
+      // 各フィールドの値を取得してモーダルにセット
+      $('#modal-name').text($('#your-name').val());
+      $('#modal-email').text($('#your-email').val());
+      $('#modal-tel').text($('#your-tel').val());
+      $('#modal-message').text($('#your-message').val());
+
+      // モーダルを表示wz
+      $('#confirmation-modal').fadeIn();
+  });
+
+  // モーダルのキャンセルボタンが押されたとき
+  $('#cancel-modal').click(function() {
+      $('#confirmation-modal').fadeOut();
+  });
+
+  // モーダルの送信ボタンが押されたとき
+  $('#submit-form').click(function() {
+      $('#confirmation-modal').fadeOut();
+
+  // 実際のフォーム送信
+  $('#contact-form').submit();
+
+  // フォーム送信後にサンクスページにリダイレクト
+  window.location.href = 'http://pospal.local/thanks/'; // サンクスページのURL
+  });
+});

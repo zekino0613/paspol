@@ -1,17 +1,19 @@
 @charset "UTF-8";
-html {
+body {
+  color: #000000;
+  background-color: #F6F6F6;
   font-size: 100%;
   scroll-behavior: smooth;
   margin-top: 0;
   -wp-admin--admin-bar--height: 0;
-}
-
-body {
-  color: #000000;
-  background-color: #F6F6F6;
   font-size: 0.9rem;
   letter-spacing: 0px;
   font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+main {
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -30,19 +32,19 @@ a {
 .section-title {
   display: block;
   width: 160px;
-  height: 100%;
+  height: auto;
   font-size: 30px;
   font-family: "Gill Sans Std Book", sans-serif;
   letter-spacing: 2px;
   position: relative;
-  margin: 0;
 }
 .section-title::after {
   content: "";
+  display: block;
   position: absolute;
   background: url(../images/paspol-image/sectionTitle-underLine@2x.png);
   width: 70px;
-  height: 100%;
+  height: 40px;
   bottom: -12px;
   left: 0;
   background-size: contain;
@@ -50,7 +52,7 @@ a {
   background-position: bottom;
 }
 
-.more-btn {
+.more-btn, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit {
   max-width: 166px;
   width: 100%;
   font-size: 14px;
@@ -62,7 +64,7 @@ a {
   position: relative;
   justify-self: end;
 }
-.more-btn::after {
+.more-btn::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit::after {
   content: "";
   position: absolute;
   background: url(../images/paspol-image/button-arrow@2x.png);
@@ -74,12 +76,12 @@ a {
   background-repeat: no-repeat;
 }
 
-.more-btn:hover {
+.more-btn:hover, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous:hover, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit:hover {
   color: white;
   background-color: black;
   transition: 0.3s;
 }
-.more-btn:hover::after {
+.more-btn:hover::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit:hover::after {
   content: "";
   position: absolute;
   background: url(../images/paspol-image/button-arrow-hover@2x.png);
@@ -134,30 +136,26 @@ a {
   background-repeat: no-repeat;
 }
 
-#a-mainvisual .a-mainvisual__images::before {
-  display: none;
-}
-
-#a-mainvisual .a-mainvisual {
+#p-mainvisual .p-mainvisual {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100vh;
 }
-#a-mainvisual .a-mainvisual__images {
+#p-mainvisual .p-mainvisual__images {
   position: relative;
   overflow: hidden;
 }
-#a-mainvisual .a-mainvisual__images--item {
+#p-mainvisual .p-mainvisual__images--item {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#a-mainvisual .a-mainvisual__images::before {
+#p-mainvisual .p-mainvisual__images::before {
   display: none;
 }
-#a-mainvisual .a-mainvisual__images::after {
+#p-mainvisual .p-mainvisual__images::after {
   content: "";
   position: absolute;
   z-index: 20;
@@ -169,7 +167,7 @@ a {
   background-size: contain;
   background-position: bottom;
 }
-#a-mainvisual .a-mainvisual .main-logo-sp {
+#p-mainvisual .p-mainvisual__logo-sp {
   display: none;
 }
 
@@ -198,6 +196,42 @@ a {
   cursor: default; /* カーソルを通常の矢印に */
 }
 
+#thanks {
+  margin: 100px auto;
+  padding: 0 7%;
+  background-color: #f6f6f6;
+}
+#thanks .thanks__inner {
+  max-width: 816px;
+  width: 100%;
+  margin: 0 auto;
+}
+#thanks .thanks__inner .thanks-content {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.49);
+}
+#thanks .thanks__inner .thanks-content .section-title {
+  font-size: 40px;
+  width: 190px;
+}
+#thanks .thanks__inner .thanks-content p {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 95px 0 80px;
+}
+#thanks .thanks__inner .thanks-content p .brsp {
+  display: none;
+}
+#thanks .thanks__inner .thanks-content .back-btn {
+  max-width: 190px;
+  margin: 0 auto;
+  padding: 16px 32px 14px;
+}
+
 @media (max-width: 500px) {
   .section-title {
     display: block;
@@ -209,6 +243,20 @@ a {
     height: 100%;
     bottom: -14px;
     left: 36px;
+  }
+  #thanks .thanks__inner .thanks-content {
+    padding: 20px;
+  }
+  #thanks .thanks__inner .thanks-content .section-title {
+    font-size: 30px;
+    width: 190px;
+  }
+  #thanks .thanks__inner .thanks-content p {
+    font-size: 20px;
+    padding: 95px 0 135px;
+  }
+  #thanks .thanks__inner .thanks-content p .brsp {
+    display: block;
   }
 }
 #header {
@@ -679,8 +727,8 @@ a {
   content: "";
   position: absolute;
   z-index: 20;
-  right: 50%;
-  bottom: 60px;
+  right: 48%;
+  bottom: 190px;
   width: 20px;
   height: 24px;
   background: url(../images/paspol-image/mainVisual-arrow@2x.png);
@@ -757,6 +805,7 @@ a {
 #product .product__inner--flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #product .product__inner .product-postlist {
   display: grid;
@@ -882,6 +931,7 @@ a {
 #news .news__inner--flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 0 75px;
 }
 #news .news__inner .news-postlist .news-post {
@@ -977,5 +1027,213 @@ a {
   }
   #news .news__inner .news-postlist .news-post .post-textarea p {
     display: none;
+  }
+}
+#contact {
+  margin: 100px auto;
+  padding: 0 7%;
+  background-color: #f6f6f6;
+}
+#contact .contact__inner {
+  max-width: 816px;
+  width: 100%;
+  margin: 0 auto;
+  /* モーダルウィンドウのスタイル */
+}
+#contact .contact__inner .wpcf7-form {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.49);
+}
+#contact .contact__inner .wpcf7-form label {
+  font-size: 18px;
+  font-weight: bold;
+}
+#contact .contact__inner .wpcf7-form .required {
+  background-color: #ff0000; /* レッド */
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+#contact .contact__inner .wpcf7-form input[type=text],
+#contact .contact__inner .wpcf7-form input[type=tel],
+#contact .contact__inner .wpcf7-form input[type=email],
+#contact .contact__inner .wpcf7-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 40px;
+  border: 1px solid #797979;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#contact .contact__inner .wpcf7-form .btn-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 55px;
+}
+#contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous {
+  display: block;
+  width: 145px;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 13px 15px 10px;
+}
+#contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit {
+  display: block;
+  width: 145px;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 15px 33px 14px;
+}
+#contact .contact__inner .wpcf7-form .btn-flex .wpcf7-spinner {
+  display: none;
+}
+#contact .contact__inner .wpcf7-form .wpcf7-not-valid-tip {
+  display: block;
+  color: red;
+  font-size: 14px;
+  margin: -40px 0 23px;
+}
+#contact .contact__inner .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact__inner .modal .modal-content {
+  max-width: 600px;
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.49);
+  border-radius: 15px;
+  margin: 65px auto;
+  padding: 30px;
+}
+#contact .contact__inner .modal .modal-content .section-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+#contact .contact__inner .modal .modal-content p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 60px 0;
+}
+#contact .contact__inner .modal .modal-content #modal-form-data {
+  max-width: 100%; /* 親要素内で幅を制限 */
+  box-sizing: border-box; /* パディングを含めたボックスサイズにする */
+}
+#contact .contact__inner .modal .modal-content #modal-form-data p {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+#contact .contact__inner .modal .modal-content #modal-form-data span {
+  color: #cd7121;
+  text-shadow: 2px 3px 3px rgba(50, 50, 50, 0.4);
+  letter-spacing: 1px;
+  word-wrap: break-word; /* 長い単語も折り返す */
+  white-space: normal; /* テキストを通常のスペース扱いにする */
+  display: inline-block; /* インラインブロックにする */
+  max-width: 100%; /* 最大幅を100%に制限 */
+  padding: 5px 0; /* 各フィールド間に余白を追加 */
+}
+#contact .contact__inner .modal .btn-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 55px;
+}
+#contact .contact__inner .modal .btn-flex .back-btn {
+  max-width: 190px;
+  margin: 0 auto;
+  padding: 18px 36px 14px;
+}
+#contact .contact__inner .modal .btn-flex .back-btn::after {
+  width: 4%;
+  top: 19px;
+}
+#contact .contact__inner .modal .btn-flex .back-btn:hover {
+  color: white;
+  background-color: black;
+  transition: 0.3s;
+}
+#contact .contact__inner .modal .btn-flex .back-btn:hover::after {
+  width: 4%;
+  top: 19px;
+}
+#contact .contact__inner .modal .btn-flex .more-btn, #contact .contact__inner .modal .wpcf7-form .btn-flex .wpcf7-previous, #contact .contact__inner .wpcf7-form .modal .btn-flex .wpcf7-previous, #contact .contact__inner .modal .wpcf7-form .btn-flex .wpcf7-submit, #contact .contact__inner .wpcf7-form .modal .btn-flex .wpcf7-submit {
+  max-width: 175px;
+  margin: 0 auto;
+  padding: 17px 51px 14px;
+}
+#contact .contact__inner .modal .btn-flex .more-btn:hover::after, #contact .contact__inner .modal .wpcf7-form .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .wpcf7-form .modal .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .modal .wpcf7-form .btn-flex .wpcf7-submit:hover::after, #contact .contact__inner .wpcf7-form .modal .btn-flex .wpcf7-submit:hover::after {
+  width: 5%;
+  top: 18px;
+}
+
+@media (max-width: 500px) {
+  #contact .contact__inner .wpcf7-form .btn-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .contact__inner .modal .modal-content {
+    margin: 100px 10px;
+    max-width: 415px;
+    width: 95%;
+    height: 85%;
+  }
+  #contact .contact__inner .modal .modal-content .section-title {
+    font-size: 25px;
+  }
+  #contact .contact__inner .modal .modal-content p {
+    font-size: 18px;
+  }
+  #contact .contact__inner .modal .modal-content #modal-form-data p {
+    font-size: 20px;
+  }
+  #contact .contact__inner .modal .modal-content #modal-form-data span {
+    letter-spacing: 0px;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 55px;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex .back-btn {
+    max-width: 190px;
+    margin: 0 auto;
+    padding: 18px 36px 14px;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex .back-btn::after {
+    width: 4%;
+    top: 19px;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex .back-btn:hover {
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex .back-btn:hover::after {
+    width: 4%;
+    top: 19px;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex .more-btn, #contact .contact__inner .modal .modal-content .wpcf7-form .btn-flex .wpcf7-previous, #contact .contact__inner .wpcf7-form .modal .modal-content .btn-flex .wpcf7-previous, #contact .contact__inner .modal .modal-content .wpcf7-form .btn-flex .wpcf7-submit, #contact .contact__inner .wpcf7-form .modal .modal-content .btn-flex .wpcf7-submit {
+    max-width: 190px;
+    padding: 17px 51px 14px;
+    margin: 13px auto;
+  }
+  #contact .contact__inner .modal .modal-content .btn-flex .more-btn:hover::after, #contact .contact__inner .modal .modal-content .wpcf7-form .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .wpcf7-form .modal .modal-content .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .modal .modal-content .wpcf7-form .btn-flex .wpcf7-submit:hover::after, #contact .contact__inner .wpcf7-form .modal .modal-content .btn-flex .wpcf7-submit:hover::after {
+    width: 5%;
+    top: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -36,7 +36,7 @@
       <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
       <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
       <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
-      <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a>
+      <li><a href="<?php echo home_url('/contact/'); ?>">CONTACT</li></a>
     </ul>
   </div><!-- /.header__inner--pc -->
 
@@ -47,7 +47,7 @@
         <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
         <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
         <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
-        <li><a href="<?php echo home_url('/'); ?>#contact">CONTACT</li></a>
+        <li><a href="<?php echo home_url('/contact/'); ?>">CONTACT</li></a>
       </ul>
     </nav><!-- /.hamburger-menu -->
 

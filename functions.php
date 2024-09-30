@@ -96,3 +96,42 @@ function theme_setup() {
   add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'theme_setup');
+
+
+
+// contact-form バリデーションチェック
+
+function my_wpcf7_validation_error_message_name($result, $tag) {
+  if ('your-name' == $tag->name) {
+      if (empty($_POST[$tag->name])) {
+          $result->invalidate($tag, 'お名前は必須項目です。');
+      }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_text', 'my_wpcf7_validation_error_message_name', 10, 2);
+
+
+function my_wpcf7_validation_error_message_email($result, $tag) {
+  if ('your-email' == $tag->name) {
+      if (empty($_POST[$tag->name])) {
+          $result->invalidate($tag, 'メールアドレスは必須項目です。');
+      }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_email', 'my_wpcf7_validation_error_message_email', 10, 2);
+
+
+function my_wpcf7_validation_error_message_tel($result, $tag) {
+  if ('your-tel' == $tag->name) {
+      if (empty($_POST[$tag->name])) {
+          $result->invalidate($tag, '電話番号は必須項目です。');
+      }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_tel', 'my_wpcf7_validation_error_message_tel', 10, 2);
+
+
+
