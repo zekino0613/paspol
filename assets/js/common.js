@@ -58,3 +58,11 @@ jQuery(document).ready(function($) {
   window.location.href = 'http://pospal.local/thanks/'; // サンクスページのURL
   });
 });
+
+
+jQuery(document).ready(function($) {
+  $('#contact .wpcf7-submit').click(function(e) {
+      e.preventDefault();
+      console.log('Submit button clicked');  // デバッグ用のログ
+  });
+});
