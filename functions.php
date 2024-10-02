@@ -65,6 +65,7 @@ function create_product_post_type() {
             ),
             'public' => true,
             'has_archive' => true,
+            'show_in_rest' => true,
             'rewrite' => array('slug' => 'products'),
             'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments')
         )
@@ -82,6 +83,7 @@ function create_news_post_type() {
           ),
           'public' => true, // 投稿タイプを公開するかどうか。trueにすると、管理画面に表示され、公開されます
           'has_archive' => true, // 投稿タイプにアーカイブページを持たせるかどうか。trueにすると、アーカイブページが生成されます
+          'show_in_rest' => true,
           'rewrite' => array('slug' => 'news'), // 投稿タイプのURLスラッグを指定します。例: yoursite.com/news/
           'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments') // この投稿タイプがサポートする機能を指定します
       )
