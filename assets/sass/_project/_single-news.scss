@@ -1,0 +1,114 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+.single-product {
+  background-color: #f6f6f6;
+  max-width: 815px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 110px 0;
+
+  .product-content {
+    .post-title-content {
+      position: relative;
+      top: 0;
+      padding: 0 0 80px;
+      margin: 0 0 80px;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(../images/paspol-image/sectionTitle-underLine@2x.png);
+        width: 70px;
+        height: 40px;
+        bottom: -12px;
+        left: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+      .single-title  {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 25px;
+      }
+    }
+
+    #entry-contents {   
+    
+      h2 {
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 26px 0 20px;
+        padding: 0 0 10px;
+        border-bottom: 1px solid #626262;
+      }
+
+      h3 {
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 23.4px 0 18px;
+        padding: 0 0 9px;
+        border-bottom: 1px solid #626262;
+      }
+      .br1 {
+        margin: 27.2px 0 19.2px;
+      }
+      .br2 {
+        margin: 0 0 19.2px;
+      }
+      .margin {
+        margin: 145px 0 0;
+      }
+      .date-category {
+        font-size: 14px;
+        color: rgb(175, 175, 175);
+      }
+      .text-type1 {
+        font-size: 16px;
+        margin: 27.2px 0 19.2px;
+      }
+      .text-type2 {
+        font-size: 16px;
+        margin: 0 0 19.2px;
+      }
+
+      .image-text {
+        margin: 20px 0;
+        &__image {
+          width: 800px;
+          height: 450px;
+        }
+        &__text {
+          font-size: 16px;
+        }
+      }
+      // パターン:h3-text
+      .h3-text {
+        width: 100%;
+        &__text {
+          margin: 0 0 19.2px;
+        }
+      }
+    }
+
+    #news {
+      padding: 110px 0 0;
+      .section-title {
+        display: block;
+        width: 270px;
+        height: auto;
+        font-size: 30px;
+        font-family: "Gill Sans Std Book", sans-serif;
+        letter-spacing: 5px;
+        position: relative;
+      }  
+    }  
+
+    
+
+
+  }
+}

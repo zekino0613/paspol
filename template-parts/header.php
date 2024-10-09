@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <title>PAS-POL -旅のモノづくりブランド-｜TABIPPO</title>
@@ -23,39 +24,41 @@
   <?php wp_head(); ?>
 </head>
 
-<header id="header">
-  <div class="header__inner--pc">
-    <a href="<?php echo home_url('/'); ?>">
-      <h1>
-        <img class="header__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/siteLogo-pc@2x.png" alt="ヘッダーロゴ">
-      </h1>
-    </a>
+<body <?php body_class(); ?>>
+  <header id="header">
+    <div class="header__inner--pc">
+      <a href="<?php echo home_url('/'); ?>">
+        <h1>
+          <img class="header__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/siteLogo-pc@2x.png" alt="ヘッダーロゴ">
+        </h1>
+      </a>
 
-    <ul class="header__nav">
-      <li class="nav_li"><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
-      <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
-      <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
-      <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
-      <li><a href="<?php echo home_url('/contact2/'); ?>">CONTACT</li></a>
-    </ul>
-  </div><!-- /.header__inner--pc -->
-
-  <div class="header__inner--sp">
-    <nav class="hamburger">
-      <ul>
-        <li><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
+      <ul class="header__nav">
+        <li class="nav_li"><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
         <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
         <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
         <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
         <li><a href="<?php echo home_url('/contact2/'); ?>">CONTACT</li></a>
       </ul>
-    </nav><!-- /.hamburger-menu -->
+    </div><!-- /.header__inner--pc -->
 
-    <div class="sp-menu">
-      <div class="menu">MENU</div><!-- /.menu -->
-      <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
-    </div><!-- /.sp-menu -->
+    <div class="header__inner--sp">
+      <nav class="hamburger">
+        <ul>
+          <li><a href="<?php echo home_url('/'); ?>#top">TOP</a></li>
+          <li><a href="<?php echo get_post_type_archive_link('product'); ?> ">PRODUCT</li></a>
+          <li><a href="<?php echo home_url('/'); ?>#about">ABOUT</li></a>
+          <li><a href="<?php echo get_post_type_archive_link('news'); ?> ">NEWS</li></a>
+          <li><a href="<?php echo home_url('/contact2/'); ?>">CONTACT</li></a>
+        </ul>
+      </nav><!-- /.hamburger-menu -->
 
-  </div><!-- /.header__inner--sp -->
+      <div class="sp-menu">
+        <div class="menu">MENU</div><!-- /.menu -->
+        <img class="menu-tab" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/navigation-toggle@2x.png" alt="メニュー画像">
+      </div><!-- /.sp-menu -->
 
-</header>
+    </div><!-- /.header__inner--sp -->
+
+  </header>
+

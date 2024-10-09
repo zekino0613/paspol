@@ -52,7 +52,7 @@ a {
   background-position: bottom;
 }
 
-.more-btn, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit {
+.more-btn, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit, .post-navigation .nav-next a {
   max-width: 166px;
   width: 100%;
   font-size: 14px;
@@ -64,11 +64,11 @@ a {
   position: relative;
   justify-self: end;
 }
-.more-btn::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit::after {
+.more-btn::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit::after, .post-navigation .nav-next a::after {
   content: "";
   position: absolute;
   background: url(../images/paspol-image/button-arrow@2x.png);
-  width: 5%;
+  width: 4.5%;
   height: 100%;
   top: 18px;
   right: 13px;
@@ -76,24 +76,24 @@ a {
   background-repeat: no-repeat;
 }
 
-.more-btn:hover, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous:hover, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit:hover {
+.more-btn:hover, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous:hover, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit:hover, .post-navigation .nav-next a:hover {
   color: white;
   background-color: black;
   transition: 0.3s;
 }
-.more-btn:hover::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit:hover::after {
+.more-btn:hover::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-previous:hover::after, #contact .contact__inner .wpcf7-form .btn-flex .wpcf7-submit:hover::after, .post-navigation .nav-next a:hover::after {
   content: "";
   position: absolute;
   background: url(../images/paspol-image/button-arrow-hover@2x.png);
-  width: 5%;
+  width: 4.5%;
   height: 100%;
-  top: 15px;
+  top: 18px;
   right: 13px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.back-btn {
+.back-btn, .post-navigation .nav-previous a {
   display: block;
   max-width: 226px;
   width: 100%;
@@ -107,11 +107,11 @@ a {
   transition: 0.3s;
   position: relative;
 }
-.back-btn::after {
+.back-btn::after, .post-navigation .nav-previous a::after {
   content: "";
   position: absolute;
   background: url(../images/paspol-image/button-arrow-back@2x.png);
-  width: 3%;
+  width: 4%;
   height: 100%;
   top: 19px;
   left: 18px;
@@ -119,16 +119,16 @@ a {
   background-repeat: no-repeat;
 }
 
-.back-btn:hover {
+.back-btn:hover, .post-navigation .nav-previous a:hover {
   color: white;
   background-color: black;
   transition: 0.3s;
 }
-.back-btn:hover::after {
+.back-btn:hover::after, .post-navigation .nav-previous a:hover::after {
   content: "";
   position: absolute;
   background: url(../images/paspol-image/button-arrow-back-hover@2x.png);
-  width: 3%;
+  width: 4%;
   height: 100%;
   top: 19px;
   left: 18px;
@@ -136,21 +136,30 @@ a {
   background-repeat: no-repeat;
 }
 
+#p-mainvisual {
+  width: 100%;
+}
 #p-mainvisual .p-mainvisual {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 #p-mainvisual .p-mainvisual__images {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 #p-mainvisual .p-mainvisual__images--item {
   width: 100%;
-  height: auto;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+}
+#p-mainvisual .p-mainvisual__images--item img {
+  width: 100%;
+  height: 100%;
 }
 #p-mainvisual .p-mainvisual__images::before {
   display: none;
@@ -169,6 +178,11 @@ a {
 }
 #p-mainvisual .p-mainvisual__logo-sp {
   display: none;
+}
+
+.container, .content {
+  max-width: 100% !important;
+  padding: 0 !important;
 }
 
 .pagination {
@@ -226,10 +240,29 @@ a {
 #thanks .thanks__inner .thanks-content p .brsp {
   display: none;
 }
-#thanks .thanks__inner .thanks-content .back-btn {
+#thanks .thanks__inner .thanks-content .back-btn, #thanks .thanks__inner .thanks-content .post-navigation .nav-previous a, .post-navigation .nav-previous #thanks .thanks__inner .thanks-content a {
   max-width: 190px;
   margin: 0 auto;
   padding: 16px 32px 14px;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0 0;
+}
+.post-navigation .nav-previous a {
+  margin: 0;
+}
+.post-navigation .nav-next a {
+  max-width: 197px;
+  display: block;
+  margin: 0;
+}
+
+.social-buttons {
+  justify-content: space-between;
+  margin: 80px 0 0;
 }
 
 @media (max-width: 500px) {
@@ -958,6 +991,12 @@ a {
   letter-spacing: 0.1em;
   line-height: 1.7em;
 }
+#news .news__inner .news-postlist .news-post .post-textarea .entry-title {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+}
 #news .news__inner .news-postlist .news-post .post-textarea .post-date {
   display: block;
   font-size: 12px;
@@ -1236,4 +1275,100 @@ a {
     width: 5%;
     top: 18px;
   }
+}
+.single-product {
+  background-color: #f6f6f6;
+  max-width: 815px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 110px 0;
+}
+.single-product .product-content .post-title-content {
+  position: relative;
+  top: 0;
+  padding: 0 0 80px;
+  margin: 0 0 80px;
+}
+.single-product .product-content .post-title-content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../images/paspol-image/sectionTitle-underLine@2x.png);
+  width: 70px;
+  height: 40px;
+  bottom: -12px;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.single-product .product-content .post-title-content .single-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 25px;
+}
+.single-product .product-content #entry-contents h2 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 26px 0 20px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #626262;
+}
+.single-product .product-content #entry-contents h3 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 23.4px 0 18px;
+  padding: 0 0 9px;
+  border-bottom: 1px solid #626262;
+}
+.single-product .product-content #entry-contents .br1 {
+  margin: 27.2px 0 19.2px;
+}
+.single-product .product-content #entry-contents .br2 {
+  margin: 0 0 19.2px;
+}
+.single-product .product-content #entry-contents .margin {
+  margin: 145px 0 0;
+}
+.single-product .product-content #entry-contents .date-category {
+  font-size: 14px;
+  color: rgb(175, 175, 175);
+}
+.single-product .product-content #entry-contents .text-type1 {
+  font-size: 16px;
+  margin: 27.2px 0 19.2px;
+}
+.single-product .product-content #entry-contents .text-type2 {
+  font-size: 16px;
+  margin: 0 0 19.2px;
+}
+.single-product .product-content #entry-contents .image-text {
+  margin: 20px 0;
+}
+.single-product .product-content #entry-contents .image-text__image {
+  width: 800px;
+  height: 450px;
+}
+.single-product .product-content #entry-contents .image-text__text {
+  font-size: 16px;
+}
+.single-product .product-content #entry-contents .h3-text {
+  width: 100%;
+}
+.single-product .product-content #entry-contents .h3-text__text {
+  margin: 0 0 19.2px;
+}
+.single-product .product-content #news {
+  padding: 110px 0 0;
+}
+.single-product .product-content #news .section-title {
+  display: block;
+  width: 270px;
+  height: auto;
+  font-size: 30px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  letter-spacing: 5px;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

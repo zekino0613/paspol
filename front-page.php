@@ -74,7 +74,7 @@
               // 投稿が存在する場合、ループを開始
               while ($product_query->have_posts()) : $product_query->the_post(); //投稿が存在するか確認 : まだ投稿が残っているかチェック
                   ?>
-              <a href="<?php echo home_url('/'); ?>">    
+              <a href="<?php the_permalink(); ?>">   
                 <div class="product-post">
                   <?php if (has_post_thumbnail()) : ?>
                     <div class="post-thumbnail">
@@ -123,7 +123,7 @@
               // 投稿が存在する場合、ループを開始
               while ($news_query->have_posts()) : $news_query->the_post(); //投稿が存在するか確認 : まだ投稿が残っているかチェック
                   ?>
-              <a href="<?php echo home_url('/'); ?>">   
+              <a href="<?php the_permalink(); ?>">    
                 <div class="news-post">
                   <?php if (has_post_thumbnail()) : ?>
                     <div class="post-thumbnail">

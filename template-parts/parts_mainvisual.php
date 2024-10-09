@@ -18,6 +18,11 @@
       } elseif (is_page(array('contact', 'thanks','contact2', 'contact-confirm2','thanks2'))) {
           // Contact or Thanks page (using the same image)
           echo '<img src="' . $contact_image . '" alt="Contact or Thanks Image" />';
+      
+        } elseif (is_singular('news')) {
+          // single-news.phpのメインビジュアル
+          echo '<img src="' . esc_url($news_image) . '" alt="News Image" />'; 
+
       } else {
           // Default for other pages or archives
           echo '<img src="' . $default_image . '" alt="Default Archive Image" />';

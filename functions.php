@@ -85,7 +85,8 @@ function create_news_post_type() {
           'has_archive' => true, // 投稿タイプにアーカイブページを持たせるかどうか。trueにすると、アーカイブページが生成されます
           'show_in_rest' => true,
           'rewrite' => array('slug' => 'news'), // 投稿タイプのURLスラッグを指定します。例: yoursite.com/news/
-          'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments') // この投稿タイプがサポートする機能を指定します
+          'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments') ,// この投稿タイプがサポートする機能を指定します
+          'taxonomies'  => array('category'),  // カテゴリを有効にする
       )
   );
 }
@@ -98,6 +99,49 @@ function theme_setup() {
   add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'theme_setup');
+
+  // ブロックエディターのサポートを有効にする
+function my_theme_setup() {
+  add_theme_support( 'editor-styles' );
+
+  // 追加のブロックエディター機能（オプション）
+  add_theme_support( 'wp-block-styles' ); // コアのブロックスタイルを有効にする
+  add_theme_support( 'align-wide' ); // 幅広ブロックオプションを有効にする
+  add_theme_support( 'responsive-embeds' ); // レスポンシブ対応の埋め込みを有効にする
+  add_theme_support( 'custom-spacing' );// マージンやパディングのスペーシングコントロールを有効にする
+  add_theme_support( 'custom-line-height' ); // 行間の調整を有効にする
+  add_theme_support( 'custom-units' ); // %、rem、vwなどのカスタム単位を有効にする
+  add_theme_support( 'align-wide' ); // 幅広（Wide）とフル幅（Full-width）のブロックオプションを有効にする
+  add_theme_support( 'wp-block-styles' );// コアブロックスタイルのサポート
+  // カラーパレットをカスタマイズする
+  add_theme_support( 'editor-color-palette', array(
+    array(
+        'name'  => __( 'Strong Magenta', 'textdomain' ),
+        'slug'  => 'strong-magenta',
+        'color' => '#a156b4',
+    ),
+  ));
+
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
+
+// ブロックエディターでボタン
+function custom_post_navigation() {
+  ob_start();
+  ?>
+  <div class="post-navigation">
+      <div class="nav-previous">
+          <?php previous_post_link('%link', 'PREV'); ?>
+      </div>
+      <div class="nav-next">
+          <?php next_post_link('%link', 'NEXT'); ?>
+      </div>
+  </div>
+  <?php
+  return ob_get_clean();
+}
+add_shortcode('post_navigation', 'custom_post_navigation');
+
 
 
 
@@ -135,5 +179,66 @@ function my_wpcf7_validation_error_message_tel($result, $tag) {
 }
 add_filter('wpcf7_validate_tel', 'my_wpcf7_validation_error_message_tel', 10, 2);
 
+
+
+
+function add_class_to_post_title($title, $id) {
+  // 投稿ページのタイトルにのみクラスを追加
+  if (is_single() && get_the_ID() == $id) {
+      $title = '<h1 class="entry-title">' . $title . '</h1>';
+  }
+  return $title;
+}
+add_filter('the_title', 'add_class_to_post_title', 10, 2);
+
+
+
+// サイドバーウィジェットエリアを登録
+function my_theme_widgets_init() {
+  register_sidebar( array(
+      'name'          => 'サイドバー',
+      'id'            => 'sidebar-1',
+      'before_widget' => '<div class="widget-area">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'my_theme_widgets_init' );
+
+
+function my_custom_block_patterns() {
+  // カテゴリを登録する（オプション）
+  register_block_pattern_category( 'my-patterns', array( 'label' => __( 'My Custom Patterns', 'textdomain' ) ) );
+
+  // ブロックパターンを登録
+  register_block_pattern(
+      'mytheme/my-custom-pattern',
+      array(
+          'title'       => __( 'My Custom Pattern', 'textdomain' ),
+          'description' => _x( 'A custom block pattern.', 'Block pattern description', 'textdomain' ),
+          'content'     => '
+              <!-- wp:paragraph -->
+              <p>' . __( 'This is a custom pattern!', 'textdomain' ) . '</p>
+              <!-- /wp:paragraph -->
+              <!-- wp:image -->
+              <figure class="wp-block-image"><img src="https://example.com/image.jpg" alt=""/></figure>
+              <!-- /wp:image -->
+              <!-- wp:image -->
+              <figure class="wp-block-image"><img src="https://example.com/image.jpg" alt=""/></figure>
+              <!-- /wp:image -->
+              <!-- wp:list -->
+              <ul><li>' . __( 'First item', 'textdomain' ) . '</li><li>' . __( 'Second item', 'textdomain' ) . '</li></ul>
+              <!-- /wp:list -->
+              <!-- wp:button -->
+              <div class="wp-block-button"><a class="wp-block-button__link">' . __( 'Click me', 'textdomain' ) . '</a></div>
+              <!-- /wp:button -->
+          ',
+          'categories'  => array( 'my-patterns' ),
+          'inserter'    => true,  // 挿入可能にする
+      )
+  );
+}
+add_action( 'init', 'my_custom_block_patterns' );
 
 
