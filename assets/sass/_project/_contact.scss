@@ -11,6 +11,7 @@
       width: 100%;
       margin: 0 auto;
       .wpcf7-form {
+        display: block;
         max-width: 600px;
         margin: 60px auto;
         background-color: #ffffff;
@@ -18,8 +19,10 @@
         border-radius: 15px;
         box-shadow: 0 4px 10px rgb(0 0 0 / 49%);
           label {
+            display: block;
             font-size: 18px;
             font-weight: bold;
+            margin: 30px 0;
           }
 
           .required {
@@ -35,12 +38,13 @@
           input[type="tel"],
           input[type="email"],
           textarea {
-          width: 100%;
-          padding: 12px;
-          margin: 5px 0 40px;
-          border: 1px solid #797979;
-          border-radius: 5px;
-          font-size: 16px;
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 40px;
+            border: 1px solid #797979;
+            border-radius: 5px;
+            font-size: 16px;
           }
 
           .btn-flex {

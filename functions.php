@@ -125,7 +125,8 @@ function my_theme_setup() {
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
 
-// ブロックエディターでボタン
+
+// ブロックエディターで別投稿ページへの遷移ボタン
 function custom_post_navigation() {
   ob_start();
   ?>
@@ -241,4 +242,8 @@ function my_custom_block_patterns() {
 }
 add_action( 'init', 'my_custom_block_patterns' );
 
-
+// .custom-marginでブロックエディター内のコンテンツにマージンを付与
+function enqueue_custom_styles() {
+  wp_enqueue_style( 'theme-styles', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_styles' );

@@ -35,6 +35,7 @@ a {
   color: rgb(0, 0, 0);
 }
 
+// section-titleのパーツ化
 .section-title {
   display: block;
   width: 160px;
@@ -59,7 +60,7 @@ a {
 }
 
 
-
+// moreボタン
 .more-btn {
   max-width: 166px;
   width: 100%;
@@ -101,6 +102,7 @@ a {
   }
 }
 
+// BACK TO TOP ボタン
 .back-btn {
   display: block;
   max-width: 226px;
@@ -168,6 +170,10 @@ a {
             height: 100%;
           }
       }
+      //single-product.php用の画像高さを設定。
+      &--item.single-full-height {
+        height: 100%; // 切り替えたい場合はこのクラスを使う
+      }
 
       &::before {
         display: none;
@@ -199,7 +205,7 @@ a {
   }
 
 
-
+// archive-pageのページネーション
 .pagination {
   text-align: center;
   display: block;
@@ -227,7 +233,7 @@ a {
   }
 }
 
-
+// page-thanks2.php  
 #thanks {
   margin: 100px auto;
   padding: 0 7%;
@@ -268,6 +274,7 @@ a {
   }
 }
 
+//single-php  投稿記事の戻る、次ボタン
 .post-navigation {
   display: flex;
   justify-content: space-between;
@@ -291,7 +298,10 @@ a {
 
 .social-buttons {
   justify-content: space-between;
-  margin: 80px 0 0;
+  max-width: 815px;
+  width: 100%;
+  margin: 80px  auto 0;
+  padding: 110px 0;
 }
 
 

@@ -1,0 +1,136 @@
+@use "../_foundation/mixin"as mixin;
+@use "../_foundation/base"as base;
+
+.single {
+  .single-product {
+    width: 100%;
+    background-color: #f6f6f6;
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+
+      .custom-field {
+        max-width: 815px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 110px 0;
+        letter-spacing: 5px;
+        .product-text {
+          font-size: 44px;
+          text-align: center;
+        }
+  
+        .product_textdetail {
+          max-width: 550px;
+          width: 100%;
+          display: block;
+          margin: 90px auto 0px;
+            p {
+              font-size: 20px;
+              letter-spacing: 0;
+              line-height: 30px;
+              margin: 40px 0 0;
+            }
+        }
+      }
+
+      .main-contents {
+        line-height: 26px;
+        padding: 110px 0;
+        .text-image-flex ,
+        .image-text-flex {
+          max-width: 815px;
+          width: 100%;
+          margin: 120px auto;
+          padding: 0;
+          display: flex;
+          align-items: flex-start;
+          
+            .textarea{
+              width: 100%;
+              padding: 0 13px; 
+              // letter-spacing: 1px;
+              line-height: 26px;
+                h3 {
+                  font-weight: bold;
+                  margin: 0 0 30px 0;
+                  letter-spacing: 3px;
+                }
+                pre {
+                  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+                }
+            }
+            figure {
+              width:100%;
+              padding: 0 13px;
+              margin: 0;
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          .flex-list {
+            max-width: 1000px;
+            width: 100%;
+            margin: 120px auto;
+            padding: 0;
+            // display: flex;
+            // flex-wrap: wrap;
+            .is-layout-constrained  {
+              .colmun-image-text {
+                figure {
+                  img {
+                    max-width: 272px;
+                    width: 100%;
+                    }
+                }
+              }
+            }
+            
+          }
+
+          .buy-button {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            max-width: 225px;
+            margin:0 0 80px 0;
+            width: 100%;
+            color: #fa5f6b;
+            border: 1px solid #fa5f6b;
+            text-align: center;
+            padding: 11px 20px 10px;
+            transition: 0.3s;
+            &::after {
+              content: '';
+              position: absolute;
+              background: url(../images/paspol-image/single-product-image/button-open-buy@2x.png);
+              width: 9px;
+              height: 9px;
+              top: 19px;
+              right: 18px;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+            &:hover {
+              color: white;
+              background-color: #fa5f6b;
+              transition: 0.3s;
+              &::after {
+                content: '';
+                position: absolute;
+                background: url(../images/paspol-image/single-product-image/button-open-buy-hover@2x.png);
+                width: 9px;
+                height: 9px;
+                top: 19px;
+                right: 18px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+          } 
+      }
+      .back-btn {
+        margin:90px auto;
+      }
+  }
+}      

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "settings": {
+    "spacing": {
+      "customMargin": true,  
+      "units": [ "px", "em", "rem", "%" ]  
+    }
+  }
+}

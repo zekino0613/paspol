@@ -1,19 +1,18 @@
 <?php
   get_template_part('template-parts/header'); // header.php をインクルード
 ?>
-  <body>
-      <main>
+
     <!-- 【共通パーツ】template-parts/parts_mainvisual -->
     <?php get_template_part('template-parts/parts_mainvisual'); ?>
 
-    <div class="single-product">
+    <div class="single">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?> <!-- 投稿があるとき -->
         <!-- タイトル -->
         <!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
 
 
       <!-- 投稿ページで入力した内容 -->
-      <div class="product-content">
+      <div class="single-news">
         <?php the_content(); ?>
 
         <section id ="news">
@@ -36,7 +35,7 @@
                   // 投稿が存在する場合、ループを開始
                   while ($news_query->have_posts()) : $news_query->the_post(); //投稿が存在するか確認 : まだ投稿が残っているかチェック
                       ?>
-                  <a href="<?php echo home_url('/'); ?>">   
+                  <a href="<?php the_permalink(); ?>">  
                     <div class="news-post">
                       <?php if (has_post_thumbnail()) : ?>
                         <div class="post-thumbnail">
