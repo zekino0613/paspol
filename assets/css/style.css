@@ -298,6 +298,15 @@ a {
     display: block;
   }
 }
+@media (max-width: 700px) {
+  .social-buttons {
+    justify-content: space-between;
+    max-width: 815px;
+    width: 100%;
+    margin: 30px auto 20px;
+    padding: 110px 0;
+  }
+}
 #header {
   width: 100%;
   background-color: transparent;
@@ -1291,7 +1300,7 @@ a {
   max-width: 815px;
   width: 100%;
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 110px 7%;
 }
 .single .single-news .post-title-content {
   position: relative;
@@ -1316,6 +1325,21 @@ a {
   font-size: 24px;
   font-weight: bold;
   margin: 0 0 25px;
+  line-height: 2.7rem;
+}
+.single .single-news #entry-contents {
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+.single .single-news #entry-contents .image-text__image {
+  max-width: 800px;
+  width: 100% !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+.single .single-news #entry-contents .image-text__image img {
+  max-width: 800px;
+  width: 100% !important;
+  height: auto;
 }
 .single .single-news #entry-contents h2 {
   width: 100%;
@@ -1358,8 +1382,11 @@ a {
   margin: 20px 0;
 }
 .single .single-news #entry-contents .image-text__image {
-  width: 800px;
-  height: 450px;
+  max-width: 800px !important;
+  width: 100%;
+}
+.single .single-news #entry-contents .image-text__image img {
+  height: auto !important;
 }
 .single .single-news #entry-contents .image-text__text {
   font-size: 16px;
@@ -1383,6 +1410,52 @@ a {
   position: relative;
 }
 
+@media (max-width: 700px) {
+  .single .single-news {
+    padding: 70px 7%;
+  }
+  .single .single-news .post-title-content {
+    margin: 0 0 20px;
+  }
+  .single .single-news .post-title-content::after {
+    bottom: 24px;
+  }
+  .single .single-news .post-title-content .single-title {
+    font-size: 20px;
+    line-height: 2.7rem;
+  }
+  .single .single-news #entry-contents h2 {
+    font-size: 20px !important;
+  }
+  .single .single-news #entry-contents h3 {
+    font-size: 18px !important;
+  }
+  .single .single-news #entry-contents .date-category {
+    font-size: 14px !important;
+    color: rgb(175, 175, 175);
+  }
+  .single .single-news #entry-contents .text-type1 {
+    font-size: 15px !important;
+    margin: 25.5px 0 18px;
+  }
+  .single .single-news #entry-contents .text-type2 {
+    font-size: 15px !important;
+    margin: 0 0 18px;
+  }
+  .single .single-news #entry-contents .image-text {
+    margin: 20px 0;
+  }
+  .single .single-news #entry-contents .image-text__image {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .single .single-news #entry-contents .image-text__text {
+    font-size: 15px !important;
+  }
+  .single .single-news #entry-contents .h3-text__text {
+    font-size: 15px !important;
+  }
+}
 .single .single-product {
   width: 100%;
   background-color: #f6f6f6;
@@ -1392,7 +1465,7 @@ a {
   max-width: 815px;
   width: 100%;
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 110px 7%;
   letter-spacing: 5px;
 }
 .single .single-product .custom-field .product-text {
@@ -1420,7 +1493,6 @@ a {
   max-width: 815px;
   width: 100%;
   margin: 120px auto;
-  padding: 0;
   display: flex;
   align-items: flex-start;
 }
@@ -1432,6 +1504,7 @@ a {
 }
 .single .single-product .main-contents .text-image-flex .textarea h3,
 .single .single-product .main-contents .image-text-flex .textarea h3 {
+  font-size: 26px !important;
   font-weight: bold;
   margin: 0 0 30px 0;
   letter-spacing: 3px;
@@ -1502,4 +1575,93 @@ a {
 }
 .single .single-product .back-btn {
   margin: 90px auto;
+}
+
+@media (max-width: 500px) {
+  .single .single-product .custom-field {
+    max-width: 815px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 7%;
+    letter-spacing: 5px;
+  }
+  .single .single-product .custom-field .product-text {
+    font-size: 36px;
+    text-align: left;
+  }
+  .single .single-product .custom-field .product_textdetail {
+    max-width: 550px;
+    width: 100%;
+    display: block;
+    margin: 15px auto 0px;
+  }
+  .single .single-product .custom-field .product_textdetail p {
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin: 15px 0 0;
+  }
+}
+@media (max-width: 700px) {
+  .single .single-product {
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  .single .single-product .main-contents {
+    line-height: 26px;
+    padding: 70px 0;
+  }
+  .single .single-product .main-contents .text-on-image .wp-block-cover-is-layout-flow .cover-text {
+    font-size: 32px !important;
+  }
+  .single .single-product .main-contents .text-image-flex {
+    margin: 60px auto;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .single .single-product .main-contents .text-image-flex .textarea {
+    width: 100%;
+    padding: 0 13px;
+  }
+  .single .single-product .main-contents .text-image-flex .textarea h3 {
+    display: block;
+    font-size: 22px !important;
+    margin: 15px auto;
+  }
+  .single .single-product .main-contents .text-image-flex .textarea pre {
+    font-size: 14px !important;
+  }
+  .single .single-product .main-contents .text-image-flex figure {
+    padding: 0 13px;
+  }
+  .single .single-product .main-contents .text-image-flex figure img {
+    width: 100%;
+  }
+  .single .single-product .main-contents .image-text-flex {
+    margin: 60px auto;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .single .single-product .main-contents .image-text-flex .textarea {
+    width: 100%;
+    padding: 0 13px;
+  }
+  .single .single-product .main-contents .image-text-flex .textarea h3 {
+    display: block;
+    font-size: 22px !important;
+    margin: 15px auto;
+  }
+  .single .single-product .main-contents .image-text-flex .textarea pre {
+    font-size: 14px !important;
+  }
+  .single .single-product .main-contents .image-text-flex figure {
+    padding: 0 13px;
+  }
+  .single .single-product .main-contents .image-text-flex figure img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

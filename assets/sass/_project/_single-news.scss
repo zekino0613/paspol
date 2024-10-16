@@ -7,7 +7,7 @@
     max-width: 815px;
     width: 100%;
     margin: 0 auto;
-    padding: 110px 0;
+    padding: 110px 7%;
     .post-title-content {
       position: relative;
       top: 0;
@@ -30,10 +30,22 @@
         font-size: 24px;
         font-weight: bold;
         margin: 0 0 25px;
+        line-height: 2.7rem;
       }
     }
 
     #entry-contents {   
+      font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+      .image-text__image {
+        max-width: 800px;
+        width: 100% !important;
+        height: fit-content !important;
+        img {
+          max-width: 800px;
+          width: 100% !important;
+          height: auto;
+        }
+      }
       h2 {
         width: 100%;
         font-size: 20px;
@@ -75,9 +87,12 @@
 
       .image-text {
         margin: 20px 0;
-        &__image {
-          width: 800px;
-          height: 450px;
+        &__image  {
+          max-width: 800px !important;
+          width:100%;
+          img {
+            height: auto !important;;
+          }
         }
         &__text {
           font-size: 16px;
@@ -104,9 +119,64 @@
         position: relative;
       }  
     }  
-
-    
-
-
   }
 }
+
+
+
+@include mixin.TAB2 { 
+.single {
+    .single-news {
+      padding: 70px 7%;
+      .post-title-content {
+        margin: 0 0 20px;
+        &::after {
+          bottom: 24px;
+        }
+        .single-title  {
+          font-size: 20px;
+          line-height: 2.7rem;
+        }
+      }
+    
+      #entry-contents {   
+        h2 {
+          font-size: 20px !important;
+        }
+
+        h3 {
+          font-size: 18px !important;
+        }
+        .date-category {
+          font-size: 14px !important;
+          color: rgb(175, 175, 175);
+        }
+        .text-type1 {
+          font-size: 15px !important;
+          margin: 25.5px 0 18px;
+        }
+        .text-type2 {
+          font-size: 15px !important;
+          margin: 0 0 18px;
+        }
+
+        .image-text {
+          margin: 20px 0;
+          &__image {
+            height: fit-content !important;
+          }
+          &__text {
+            font-size: 15px !important;
+          }
+        }
+        // パターン:h3-text
+        .h3-text {
+          &__text {
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -346,3 +346,12 @@ a {
 }
 
 
+@include mixin.TAB2 {
+  .social-buttons {
+    justify-content: space-between;
+    max-width: 815px;
+    width: 100%;
+    margin: 30px auto 20px;
+    padding: 110px 0;
+  }
+}

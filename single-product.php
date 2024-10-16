@@ -54,14 +54,10 @@
       <!-- /フィールドエリア --------------------------------------->
       </div><!-- /custom-field -->
         
-      <!-- ブロックエディター中身 ---------------------------------->  
-      <?php the_content(); ?>
+      <?php the_content(); ?> <!-- ブロックエディター中身 -->
       
       <a class="back-btn" href="<?php echo home_url('/'); ?>">BACK TO TOP</a> <!-- 戻る -->
-    
 
-
-    
     </div>
   <!-- 投稿がないとき -->
   <?php endwhile; else : ?>
