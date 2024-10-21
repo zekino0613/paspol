@@ -8,6 +8,7 @@ body {
   -wp-admin--admin-bar--height: 0;
   font-size: 0.9rem;
   letter-spacing: 0px;
+  text-transform: uppercase;
   font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
@@ -27,6 +28,13 @@ li {
 a {
   text-decoration: none;
   color: rgb(0, 0, 0);
+}
+
+/* キーボード操作時にのみフォーカスアウトラインを   表示 */
+a:focus-visible {
+  outline: 2px solid #fefefe; /* フォーカス時の アウトライン */
+  box-shadow: 0 0 2px #ffffff, 0 0 0 4px #000000; /* 2本目のアウトライン */
+  border-radius: 5px;
 }
 
 .section-title {
@@ -183,7 +191,8 @@ a {
   display: none;
 }
 
-.container, .content {
+.container,
+.content {
   max-width: 100% !important;
   padding: 0 !important;
 }
@@ -207,10 +216,14 @@ a {
   transition: 0.3s;
 }
 .pagination .current {
-  color: rgb(214, 214, 214); /* 文字色を白に */
-  border: solid 1px rgb(214, 214, 214); /* グレーの背景色 */
-  pointer-events: none; /* クリックできないようにする */
-  cursor: default; /* カーソルを通常の矢印に */
+  color: rgb(214, 214, 214);
+  /* 文字色を白に */
+  border: solid 1px rgb(214, 214, 214);
+  /* グレーの背景色 */
+  pointer-events: none;
+  /* クリックできないようにする */
+  cursor: default;
+  /* カーソルを通常の矢印に */
 }
 
 #thanks {
@@ -400,6 +413,9 @@ a {
     letter-spacing: 0.1em;
     border-bottom: 1px solid #FFFFFF;
     padding: 20px 60px 16px;
+  }
+  #header .header__inner--sp .hamburger a:focus {
+    outline: 2px solid #35d305; /* フォーカス時の アウトライン */
   }
   #header .header__inner--sp .sp-menu {
     display: flex;

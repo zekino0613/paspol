@@ -20,7 +20,7 @@
   <div class="footer__end">
     <div class="footer__end--inner">
       <a href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/siteLogo-small@2x.png" alt="ヘッダーロゴ">
+        <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/siteLogo-small@2x.png" alt="ヘッダーロゴ">
       </a>
 
       <p>

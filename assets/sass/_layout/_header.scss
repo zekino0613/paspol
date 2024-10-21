@@ -112,6 +112,10 @@
                   }  
                 }              
             }
+            .hamburger a:focus {
+              outline: 2px solid #35d305; /* フォーカス時の アウトライン */
+              }
+
 
           
             .sp-menu {
@@ -130,7 +134,8 @@
                 width: 15px;
                 height: 10px;
               }
-            }
+              
+          }
         }
       }
     }

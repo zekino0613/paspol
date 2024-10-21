@@ -10,22 +10,22 @@
         // Check if the current page is the archive page for 'product'
         if (is_post_type_archive('product')) {
           // Product archive page
-          echo '<img src="' . $product_image . '" alt="Product Archive Image" />';
+          echo '<img loading="lazy" src="' . $product_image . '" alt="Product Archive Image" />';
       } elseif (is_post_type_archive('news')) {
           // News archive page
-          echo '<img src="' . $news_image . '" alt="News Archive Image" />';
+          echo '<img loading="lazy" src="' . $news_image . '" alt="News Archive Image" />';
           //一つの画像を複数個所で使用
       } elseif (is_page(array('contact', 'thanks','contact2', 'contact-confirm2','thanks2'))) {
           // Contact or Thanks page (using the same image)
-          echo '<img src="' . $contact_image . '" alt="Contact or Thanks Image" />';
+          echo '<img loading="lazy" src="' . $contact_image . '" alt="Contact or Thanks Image" />';
       
         } elseif (is_singular('news')) {
           // single-news.phpのメインビジュアル
-          echo '<img src="' . esc_url($news_image) . '" alt="News Image" />'; 
+          echo '<img loading="lazy" src="' . esc_url($news_image) . '" alt="News Image" />'; 
 
       } else {
           // Default for other pages or archives
-          echo '<img src="' . $default_image . '" alt="Default Archive Image" />';
+          echo '<img loading="lazy" src="' . $default_image . '" alt="Default Archive Image" />';
       }
       ?> 
     ?>

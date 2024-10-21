@@ -263,7 +263,7 @@ button:disabled,
  */
 
 :-moz-focusring {
-  outline: auto;
+  outline: 0;
 }
 
 select:disabled {
@@ -382,7 +382,7 @@ summary {
  */
 
 [contenteditable]:focus {
-  outline: auto;
+  outline: 0;
 }
 
 /* Tables */

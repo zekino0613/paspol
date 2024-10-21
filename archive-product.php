@@ -3,8 +3,7 @@
   get_template_part('template-parts/header'); // header.php をインクルード
 ?>
 
-  <body>
-    <main>
+
       <!-- 【共通パーツ】template-parts/parts_mainvisual -->
       <?php get_template_part('template-parts/parts_mainvisual'); ?>
 

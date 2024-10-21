@@ -7,11 +7,11 @@
   <main>
     <section id="mainvisual">
       <div class="mainvisual__images">
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_2-0x0.jpg" alt="メインビジュアル画像１" /></div>
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_6-0x0.jpg" alt="メインビジュアル画像２" /></div>
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_7-0x0.jpg" alt="メインビジュアル画像３" /></div>
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_13-0x0.jpg" alt="メインビジュアル画像４" /></div>
-        <div class="mainvisual__images--item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_111-0x0.jpg" alt="メインビジュアル画像５" /></div>
+        <div class="mainvisual__images--item"><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_2-0x0.jpg" alt="メインビジュアル画像１" /></div>
+        <div class="mainvisual__images--item"><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_6-0x0.jpg" alt="メインビジュアル画像２" /></div>
+        <div class="mainvisual__images--item"><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_7-0x0.jpg" alt="メインビジュアル画像３" /></div>
+        <div class="mainvisual__images--item"><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_13-0x0.jpg" alt="メインビジュアル画像４" /></div>
+        <div class="mainvisual__images--item"><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/main_visual_111-0x0.jpg" alt="メインビジュアル画像５" /></div>
       </div>
     
       <div class="mainvisual__logo-sp"></div><!-- /mainvisual__logo-sp -->
@@ -41,7 +41,7 @@
             こんな時代だからこそ、<br>
           </p>
 
-          <img class="paspol" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/concept-siteLogo@2x.png" alt="「PAS-POL」画像">
+          <img loading="lazy" class="paspol" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/concept-siteLogo@2x.png" alt="「PAS-POL」画像">
 
           <p class="concept__inner--text">
             それは、自分と世界を繋げる<br>
@@ -74,16 +74,16 @@
               // 投稿が存在する場合、ループを開始
               while ($product_query->have_posts()) : $product_query->the_post(); //投稿が存在するか確認 : まだ投稿が残っているかチェック
                   ?>
-              <a href="<?php the_permalink(); ?>">   
-                <div class="product-post">
-                  <?php if (has_post_thumbnail()) : ?>
-                    <div class="post-thumbnail">
-                        <?php the_post_thumbnail('medium'); // サムネイル画像を 'medium' サイズで表示 ?>
-                    </div>
-                    <h3 class="product-title"><?php the_title(); ?></h3> <!-- 投稿のタイトルを表示 -->
-                    <p><?php the_excerpt(); ?></p>  <!--投稿の抜粋を表示 -->
-                  <?php endif; ?>
-                </div>
+                <a href="<?php the_permalink(); ?>">   
+                  <div class="product-post">
+                    <?php if (has_post_thumbnail()) : ?>
+                      <div class="post-thumbnail">
+                          <?php the_post_thumbnail('medium'); // サムネイル画像を 'medium' サイズで表示 ?>
+                      </div>
+                      <h3 class="product-title"><?php the_title(); ?></h3> <!-- 投稿のタイトルを表示 -->
+                      <p><?php the_excerpt(); ?></p>  <!--投稿の抜粋を表示 -->
+                    <?php endif; ?>
+                  </div>
               </a>      
           <?php
             endwhile;

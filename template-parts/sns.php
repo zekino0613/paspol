@@ -1,7 +1,7 @@
 <section id="sns">
   <div class="sns__top">
     <a href="<?php echo home_url('/'); ?>">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/backTop@2x.png" alt="sns-top画像">
+      <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/paspol-image/backTop@2x.png" alt="sns-top画像">
     </a>
   </div><!-- /.sns__top -->
 
